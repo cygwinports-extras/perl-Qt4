@@ -1,0 +1,4 @@
+category: Perl KDE
+requires: libgcc1 libQtCore4 libQtDBus4 libQtGui4 libQtNetwork4 libQtXml4 libsmokeqt2 libstdc++6 perl
+sdesc: "Perl Qt4 bindings"
+ldesc: "This module provides bindings to the Qt 4 libraries for Perl."

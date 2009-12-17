@@ -1,0 +1,22 @@
+--- origsrc/Qt4-0.60_b1/CMakeLists.txt	2009-12-16 01:32:27.000000000 -0600
++++ src/Qt4-0.60_b1/CMakeLists.txt	2009-12-17 14:13:35.184177200 -0600
+@@ -2,7 +2,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR
+ 
+ include (MacroOptionalFindPackage)
+ 
+-FIND_PACKAGE(Perl REQUIRED)
++FIND_PACKAGE(PerlLibs REQUIRED)
+ FIND_PACKAGE (Qt4 REQUIRED)
+ 
+ add_definitions (${QT_DEFINITIONS}  -DHAVE_CONFIG_H=1)
+--- origsrc/Qt4-0.60_b1/src/CMakeLists.txt	2009-12-16 01:05:49.000000000 -0600
++++ src/Qt4-0.60_b1/src/CMakeLists.txt	2009-12-17 04:55:26.331724400 -0600
+@@ -23,7 +23,7 @@ set(perlqt_LIB_SRCS
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/perl/blib/arch/auto/Qt4)
+ add_library(perlqt4 SHARED ${perlqt_LIB_SRCS})
+ 
+-target_link_libraries(perlqt4 ${QT_QTCORE_LIBRARY} ${PERL_LIBRARY} ${QT_QTNETWORK_LIBRARY} smokeqt)
++target_link_libraries(perlqt4 ${QT_QTCORE_LIBRARY} ${PERL_LIBRARY} ${QT_QTNETWORK_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTDBUS_LIBRARY} ${QT_QTCORE_LIBRARY} smokeqt)
+ set_target_properties(perlqt4 PROPERTIES OUTPUT_NAME "Qt4")
+ set_target_properties(perlqt4 PROPERTIES PREFIX "")
+ 
