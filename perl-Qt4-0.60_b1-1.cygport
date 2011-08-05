@@ -1,9 +1,0 @@
-CPAN_AUTHOR=cburel
-inherit perl cmake
-
-PATCH_URI="0.60-no-undefined.patch"
-
-# FIXME: generate src/Qt4.c in ${CMAKE_CURRENT_BINARY_DIR}
-DIFF_EXCLUDES="Qt4.c Ui_*.pm"
-
-CYGCMAKE_ARGS="-DCUSTOM_PERL_SITE_ARCH_DIR=${PERL_VENDORARCH}"

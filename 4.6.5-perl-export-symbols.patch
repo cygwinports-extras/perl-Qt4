@@ -1,0 +1,9 @@
+--- origsrc/kdebindings-4.6.5/perl/qtcore/src/CMakeLists.txt	2011-01-18 15:23:59.000000000 -0600
++++ src/kdebindings-4.6.5/perl/qtcore/src/CMakeLists.txt	2011-07-17 02:04:26.745241900 -0500
+@@ -49,5 +49,6 @@ target_link_libraries(perlqtcore4
+ 
+ set_target_properties(perlqtcore4 PROPERTIES OUTPUT_NAME "QtCore4")
+ set_target_properties(perlqtcore4 PROPERTIES PREFIX "")
++set_target_properties(perlqtcore4 PROPERTIES LINK_FLAGS "${CMAKE_EXE_EXPORTS_C_FLAG}")
+ 
+ install(TARGETS perlqtcore4 DESTINATION ${CUSTOM_PERL_SITE_ARCH_DIR}/auto/QtCore4/)
