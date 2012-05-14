@@ -1,0 +1,10 @@
+--- origsrc/perlqt-4.8.3/qtdbus/src/CMakeLists.txt	2012-02-29 16:56:20.700835200 -0600
++++ src/perlqt-4.8.3/qtdbus/src/CMakeLists.txt	2012-05-13 20:34:50.615558300 -0500
+@@ -26,6 +26,7 @@ add_library(perl_qtdbus4 SHARED ${qtdbus
+ 
+ target_link_libraries(perl_qtdbus4
+     ${SMOKE_QTDBUS_LIBRARY}
++    ${QT_QTDBUS_LIBRARY}
+     perlqtcore4)
+ 
+ set_target_properties(perl_qtdbus4 PROPERTIES OUTPUT_NAME "QtDBus4")

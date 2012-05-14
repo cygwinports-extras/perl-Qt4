@@ -1,0 +1,10 @@
+--- origsrc/perlqt-4.8.3/qtcore/src/CMakeLists.txt	2012-02-29 16:56:20.698835200 -0600
++++ src/perlqt-4.8.3/qtcore/src/CMakeLists.txt	2012-05-13 19:33:00.076327600 -0500
+@@ -53,6 +53,7 @@ target_link_libraries(perlqtcore4
+ set_target_properties(perlqtcore4 PROPERTIES
+     OUTPUT_NAME ${libraryName}
+     PREFIX ""
++    LINK_FLAGS "${CMAKE_EXE_EXPORTS_C_FLAG}"
+     INSTALL_NAME_DIR ${CUSTOM_PERL_SITE_ARCH_DIR}/auto/${libraryName}/
+ )
+ 
