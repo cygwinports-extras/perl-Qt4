@@ -1,0 +1,222 @@
+perlqtcore4 must NOT be a module, as everything else links against it
+
+--- origsrc/perlqt-4.10.5/phonon/src/CMakeLists.txt	2013-06-28 12:16:25.749025200 -0500
++++ src/perlqt-4.10.5/phonon/src/CMakeLists.txt	2013-08-29 21:22:23.399852100 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_phonon SHARED ${phonon_LIBRARY_SRC})
++add_library(perl_phonon MODULE ${phonon_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_phonon
+     ${SMOKE_PHONON_LIBRARY}
+--- origsrc/perlqt-4.10.5/qimageblitz/src/CMakeLists.txt	2013-06-28 12:16:25.750025100 -0500
++++ src/perlqt-4.10.5/qimageblitz/src/CMakeLists.txt	2013-08-29 21:22:29.521202200 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qimageblitz SHARED ${qimageblitz_LIBRARY_SRC})
++add_library(perl_qimageblitz MODULE ${qimageblitz_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qimageblitz
+     ${SMOKE_QIMAGEBLITZ_LIBRARY}
+--- origsrc/perlqt-4.10.5/qsci/src/CMakeLists.txt	2013-06-28 12:16:25.750025100 -0500
++++ src/perlqt-4.10.5/qsci/src/CMakeLists.txt	2013-08-29 21:22:33.327419900 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qsci SHARED ${qsci_LIBRARY_SRC})
++add_library(perl_qsci MODULE ${qsci_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qsci
+     ${SMOKE_QSCI_LIBRARY}
+--- origsrc/perlqt-4.10.5/qt3support/src/CMakeLists.txt	2013-06-28 12:16:25.751025100 -0500
++++ src/perlqt-4.10.5/qt3support/src/CMakeLists.txt	2013-08-29 21:22:36.234586200 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qt3support4 SHARED ${qt3support4_LIBRARY_SRC})
++add_library(perl_qt3support4 MODULE ${qt3support4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qt3support4
+     ${SMOKE_QT3SUPPORT_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtdbus/src/CMakeLists.txt	2013-08-29 21:08:59.571875700 -0500
++++ src/perlqt-4.10.5/qtdbus/src/CMakeLists.txt	2013-08-29 21:22:51.821477700 -0500
+@@ -22,7 +22,7 @@ set(qtdbus4_LIBRARY_SRC
+ )
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/QtDBus4)
+-add_library(perl_qtdbus4 SHARED ${qtdbus4_LIBRARY_SRC})
++add_library(perl_qtdbus4 MODULE ${qtdbus4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtdbus4
+     ${SMOKE_QTDBUS_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtdeclarative/src/CMakeLists.txt	2013-06-28 12:16:25.764024800 -0500
++++ src/perlqt-4.10.5/qtdeclarative/src/CMakeLists.txt	2013-08-29 21:22:59.408911700 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtdeclarative4 SHARED ${qtdeclarative4_LIBRARY_SRC})
++add_library(perl_qtdeclarative4 MODULE ${qtdeclarative4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtdeclarative4
+     ${SMOKE_QTDECLARATIVE_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtgui/src/CMakeLists.txt	2013-06-28 12:16:25.871022600 -0500
++++ src/perlqt-4.10.5/qtgui/src/CMakeLists.txt	2013-08-29 21:23:03.409140500 -0500
+@@ -29,7 +29,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtgui4 SHARED ${qtgui4_LIBRARY_SRC})
++add_library(perl_qtgui4 MODULE ${qtgui4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtgui4
+     ${SMOKE_QTGUI_LIBRARY}
+--- origsrc/perlqt-4.10.5/qthelp/src/CMakeLists.txt	2013-06-28 12:16:25.872022600 -0500
++++ src/perlqt-4.10.5/qthelp/src/CMakeLists.txt	2013-08-29 21:23:05.712272200 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qthelp4 SHARED ${qthelp4_LIBRARY_SRC})
++add_library(perl_qthelp4 MODULE ${qthelp4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qthelp4
+     ${SMOKE_QTHELP_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtmultimedia/src/CMakeLists.txt	2013-06-28 12:16:25.873022600 -0500
++++ src/perlqt-4.10.5/qtmultimedia/src/CMakeLists.txt	2013-08-29 21:23:08.586436600 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtmultimedia4 SHARED ${qtmultimedia4_LIBRARY_SRC})
++add_library(perl_qtmultimedia4 MODULE ${qtmultimedia4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtmultimedia4
+     ${SMOKE_QTMULTIMEDIA_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtnetwork/src/CMakeLists.txt	2013-06-28 12:16:25.873022600 -0500
++++ src/perlqt-4.10.5/qtnetwork/src/CMakeLists.txt	2013-08-29 21:23:11.854623500 -0500
+@@ -30,7 +30,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtnetwork4 SHARED ${qtnetwork4_LIBRARY_SRC})
++add_library(perl_qtnetwork4 MODULE ${qtnetwork4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtnetwork4
+     ${SMOKE_QTNETWORK_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtopengl/src/CMakeLists.txt	2013-06-28 12:16:25.874022500 -0500
++++ src/perlqt-4.10.5/qtopengl/src/CMakeLists.txt	2013-08-29 21:22:14.216326800 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtopengl4 SHARED ${qtopengl4_LIBRARY_SRC})
++add_library(perl_qtopengl4 MODULE ${qtopengl4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtopengl4
+     ${SMOKE_QTOPENGL_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtscript/src/CMakeLists.txt	2013-06-28 12:16:25.874022500 -0500
++++ src/perlqt-4.10.5/qtscript/src/CMakeLists.txt	2013-08-29 21:23:19.234045600 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtscript4 SHARED ${qtscript4_LIBRARY_SRC})
++add_library(perl_qtscript4 MODULE ${qtscript4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtscript4
+     ${SMOKE_QTSCRIPT_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtsql/src/CMakeLists.txt	2013-06-28 12:16:25.875022500 -0500
++++ src/perlqt-4.10.5/qtsql/src/CMakeLists.txt	2013-08-29 21:23:21.618182000 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtsql4 SHARED ${qtsql4_LIBRARY_SRC})
++add_library(perl_qtsql4 MODULE ${qtsql4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtsql4
+     ${SMOKE_QTSQL_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtsvg/src/CMakeLists.txt	2013-06-28 12:16:25.875022500 -0500
++++ src/perlqt-4.10.5/qtsvg/src/CMakeLists.txt	2013-08-29 21:23:23.932314300 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtsvg4 SHARED ${qtsvg4_LIBRARY_SRC})
++add_library(perl_qtsvg4 MODULE ${qtsvg4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtsvg4
+     ${SMOKE_QTSVG_LIBRARY}
+--- origsrc/perlqt-4.10.5/qttest/src/CMakeLists.txt	2013-06-28 12:16:25.876022500 -0500
++++ src/perlqt-4.10.5/qttest/src/CMakeLists.txt	2013-08-29 21:23:26.410456100 -0500
+@@ -29,7 +29,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qttest4 SHARED ${qttest4_LIBRARY_SRC})
++add_library(perl_qttest4 MODULE ${qttest4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qttest4
+     ${SMOKE_QTTEST_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtuitools/src/CMakeLists.txt	2013-06-28 12:16:25.876022500 -0500
++++ src/perlqt-4.10.5/qtuitools/src/CMakeLists.txt	2013-08-29 21:23:28.698587000 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtuitools4 SHARED ${qtuitools4_LIBRARY_SRC})
++add_library(perl_qtuitools4 MODULE ${qtuitools4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtuitools4
+     ${SMOKE_QTUITOOLS_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtwebkit/src/CMakeLists.txt	2013-06-28 12:16:25.876022500 -0500
++++ src/perlqt-4.10.5/qtwebkit/src/CMakeLists.txt	2013-08-29 21:23:31.988775100 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtwebkit4 SHARED ${qtwebkit4_LIBRARY_SRC})
++add_library(perl_qtwebkit4 MODULE ${qtwebkit4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtwebkit4
+     ${SMOKE_QTWEBKIT_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtxml/src/CMakeLists.txt	2013-06-28 12:16:25.877022500 -0500
++++ src/perlqt-4.10.5/qtxml/src/CMakeLists.txt	2013-08-29 21:23:34.551921700 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtxml4 SHARED ${qtxml4_LIBRARY_SRC})
++add_library(perl_qtxml4 MODULE ${qtxml4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtxml4
+     ${SMOKE_QTXML_LIBRARY}
+--- origsrc/perlqt-4.10.5/qtxmlpatterns/src/CMakeLists.txt	2013-06-28 12:16:25.877022500 -0500
++++ src/perlqt-4.10.5/qtxmlpatterns/src/CMakeLists.txt	2013-08-29 21:23:38.365139800 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qtxmlpatterns4 SHARED ${qtxmlpatterns4_LIBRARY_SRC})
++add_library(perl_qtxmlpatterns4 MODULE ${qtxmlpatterns4_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qtxmlpatterns4
+     ${SMOKE_QTXMLPATTERNS_LIBRARY}
+--- origsrc/perlqt-4.10.5/qwt/src/CMakeLists.txt	2013-06-28 12:16:25.878022500 -0500
++++ src/perlqt-4.10.5/qwt/src/CMakeLists.txt	2013-08-29 21:23:41.265305700 -0500
+@@ -28,7 +28,7 @@ else()
+ endif(WIN32)
+ 
+ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/blib/arch/auto/${libraryName})
+-add_library(perl_qwt SHARED ${qwt_LIBRARY_SRC})
++add_library(perl_qwt MODULE ${qwt_LIBRARY_SRC})
+ 
+ target_link_libraries(perl_qwt
+     ${SMOKE_QWT_LIBRARY}
