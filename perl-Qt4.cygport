@@ -2,7 +2,7 @@ ORIG_PN="perlqt"
 inherit perl kde4
 
 NAME="perl-Qt4"
-VERSION=4.12.5
+VERSION=4.13.3
 RELEASE=1
 CATEGORY="Perl"
 SUMMARY="Perl Qt4 bindings"
