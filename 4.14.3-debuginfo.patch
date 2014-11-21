@@ -1,0 +1,231 @@
+--- origsrc/perlqt-4.14.3/phonon/src/CMakeLists.txt	2014-11-21 00:56:38.997603100 -0600
++++ src/perlqt-4.14.3/phonon/src/CMakeLists.txt	2014-11-21 01:05:24.414822600 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(phonon_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/Phonon.c
+--- origsrc/perlqt-4.14.3/qimageblitz/src/CMakeLists.txt	2014-11-21 00:56:39.000103400 -0600
++++ src/perlqt-4.14.3/qimageblitz/src/CMakeLists.txt	2014-11-21 01:05:35.595742400 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qimageblitz_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QImageBlitz.c
+--- origsrc/perlqt-4.14.3/qsci/src/CMakeLists.txt	2014-11-21 00:56:39.002603700 -0600
++++ src/perlqt-4.14.3/qsci/src/CMakeLists.txt	2014-11-21 01:05:40.355846800 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qsci_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/Qsci.c
+--- origsrc/perlqt-4.14.3/qt3support/src/CMakeLists.txt	2014-11-21 00:56:39.005104000 -0600
++++ src/perlqt-4.14.3/qt3support/src/CMakeLists.txt	2014-11-21 01:05:44.947929900 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qt3support4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/Qt3Support4.c
+--- origsrc/perlqt-4.14.3/qtcore/src/CMakeLists.txt	2014-11-21 00:56:38.579550000 -0600
++++ src/perlqt-4.14.3/qtcore/src/CMakeLists.txt	2014-11-21 01:05:48.724909600 -0600
+@@ -20,7 +20,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(perlqtcore_LIBRARY_SRCS
+     binding.cpp
+--- origsrc/perlqt-4.14.3/qtdbus/src/CMakeLists.txt	2014-11-21 00:56:39.008104400 -0600
++++ src/perlqt-4.14.3/qtdbus/src/CMakeLists.txt	2014-11-21 01:05:53.288489100 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtdbus4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtDBus4.c
+--- origsrc/perlqt-4.14.3/qtdeclarative/src/CMakeLists.txt	2014-11-21 00:56:39.010604700 -0600
++++ src/perlqt-4.14.3/qtdeclarative/src/CMakeLists.txt	2014-11-21 01:05:56.645915400 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtdeclarative4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtDeclarative4.c
+--- origsrc/perlqt-4.14.3/qtgui/src/CMakeLists.txt	2014-11-21 00:56:39.013105000 -0600
++++ src/perlqt-4.14.3/qtgui/src/CMakeLists.txt	2014-11-21 01:06:00.300379500 -0600
+@@ -15,7 +15,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtgui4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtGui4.c
+--- origsrc/perlqt-4.14.3/qthelp/src/CMakeLists.txt	2014-11-21 00:56:39.015605300 -0600
++++ src/perlqt-4.14.3/qthelp/src/CMakeLists.txt	2014-11-21 01:06:03.815325800 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qthelp4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtHelp4.c
+--- origsrc/perlqt-4.14.3/qtmultimedia/src/CMakeLists.txt	2014-11-21 00:56:39.018605700 -0600
++++ src/perlqt-4.14.3/qtmultimedia/src/CMakeLists.txt	2014-11-21 01:06:07.903344900 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtmultimedia4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtMultimedia4.c
+--- origsrc/perlqt-4.14.3/qtnetwork/src/CMakeLists.txt	2014-11-21 00:56:39.021606100 -0600
++++ src/perlqt-4.14.3/qtnetwork/src/CMakeLists.txt	2014-11-21 01:06:11.396788500 -0600
+@@ -15,7 +15,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtnetwork4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtNetwork4.c
+--- origsrc/perlqt-4.14.3/qtopengl/src/CMakeLists.txt	2014-11-21 00:56:39.025606600 -0600
++++ src/perlqt-4.14.3/qtopengl/src/CMakeLists.txt	2014-11-21 01:06:14.924736500 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtopengl4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtOpenGL4.c
+--- origsrc/perlqt-4.14.3/qtscript/src/CMakeLists.txt	2014-11-21 00:56:39.028607000 -0600
++++ src/perlqt-4.14.3/qtscript/src/CMakeLists.txt	2014-11-21 01:06:18.494189800 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtscript4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtScript4.c
+--- origsrc/perlqt-4.14.3/qtsql/src/CMakeLists.txt	2014-11-21 00:56:39.031107300 -0600
++++ src/perlqt-4.14.3/qtsql/src/CMakeLists.txt	2014-11-21 01:06:23.990887800 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtsql4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtSql4.c
+--- origsrc/perlqt-4.14.3/qtsvg/src/CMakeLists.txt	2014-11-21 00:56:39.034107700 -0600
++++ src/perlqt-4.14.3/qtsvg/src/CMakeLists.txt	2014-11-21 01:06:28.132913700 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtsvg4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtSvg4.c
+--- origsrc/perlqt-4.14.3/qttest/src/CMakeLists.txt	2014-11-21 00:56:39.037108100 -0600
++++ src/perlqt-4.14.3/qttest/src/CMakeLists.txt	2014-11-21 01:06:32.527471800 -0600
+@@ -15,7 +15,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qttest4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtTest4.c
+--- origsrc/perlqt-4.14.3/qtuitools/src/CMakeLists.txt	2014-11-21 00:56:39.040108500 -0600
++++ src/perlqt-4.14.3/qtuitools/src/CMakeLists.txt	2014-11-21 01:05:06.122999800 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtuitools4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtUiTools4.c
+--- origsrc/perlqt-4.14.3/qtwebkit/src/CMakeLists.txt	2014-11-21 00:56:39.042608800 -0600
++++ src/perlqt-4.14.3/qtwebkit/src/CMakeLists.txt	2014-11-21 01:06:37.433094700 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtwebkit4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtWebKit4.c
+--- origsrc/perlqt-4.14.3/qtxml/src/CMakeLists.txt	2014-11-21 00:56:39.045109100 -0600
++++ src/perlqt-4.14.3/qtxml/src/CMakeLists.txt	2014-11-21 01:06:40.834526600 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtxml4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtXml4.c
+--- origsrc/perlqt-4.14.3/qtxmlpatterns/src/CMakeLists.txt	2014-11-21 00:56:39.048109500 -0600
++++ src/perlqt-4.14.3/qtxmlpatterns/src/CMakeLists.txt	2014-11-21 01:06:44.582502600 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qtxmlpatterns4_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/QtXmlPatterns4.c
+--- origsrc/perlqt-4.14.3/qwt/src/CMakeLists.txt	2014-11-21 00:56:39.050609800 -0600
++++ src/perlqt-4.14.3/qwt/src/CMakeLists.txt	2014-11-21 01:06:47.795410600 -0600
+@@ -14,7 +14,7 @@ set_source_files_properties( ${CMAKE_CUR
+     PROPERTIES LANGUAGE CXX
+ )
+ 
+-set( CMAKE_CXX_FLAGS ${PERL_CXX_FLAGS} )
++add_compile_options( ${PERL_CXX_FLAGS} )
+ 
+ set(qwt_LIBRARY_SRC
+     ${CMAKE_CURRENT_BINARY_DIR}/Qwt.c
