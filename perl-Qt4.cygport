@@ -3,7 +3,7 @@ inherit perl kde4
 
 NAME="perl-Qt4"
 VERSION=4.14.3
-RELEASE=1
+RELEASE=2
 CATEGORY="Perl"
 SUMMARY="Perl Qt4 bindings"
 DESCRIPTION="A collection of language bindings for Qt and KDE"
